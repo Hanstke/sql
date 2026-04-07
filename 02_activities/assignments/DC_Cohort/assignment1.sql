@@ -28,11 +28,15 @@ LIMIT 10;
 --WHERE
 /* 1. Write a query that returns all customer purchases of product IDs 4 and 9. 
 Limit to 25 rows of output. */
+--QUERY 3
 
 SELECT *
 FROM customer_purchases
 WHERE product_id IN (4,9)
 LIMIT 25;
+
+
+--END QUERY
 
 /* 2. Write a query that returns all customer purchases and a new calculated column 'price' (quantity * cost_to_customer_per_qty), 
 filtered by customer IDs between 8 and 10 (inclusive) using either:
@@ -40,7 +44,7 @@ filtered by customer IDs between 8 and 10 (inclusive) using either:
 	2.  one condition using BETWEEN
 Limit to 25 rows of output.
 */
---QUERY 3
+--QUERY 4
 
 SELECT *
 ,CASE WHEN quantity > 0.00
@@ -58,7 +62,7 @@ LIMIT 25;
 Using the product table, write a query that outputs the product_id and product_name
 columns and add a column called prod_qty_type_condensed that displays the word “unit” 
 if the product_qty_type is “unit,” and otherwise displays the word “bulk.” */
---QUERY 4
+--QUERY 5
 
 SELECT product_id,product_name
 ,CASE WHEN product_qty_type = 'unit' THEN 'unit'
@@ -73,7 +77,7 @@ END as prod_qty_type_condensed
 /* 2. We want to flag all of the different types of pepper products that are sold at the market. 
 add a column to the previous query called pepper_flag that outputs a 1 if the product_name 
 contains the word “pepper” (regardless of capitalization), and otherwise outputs 0. */
---QUERY 5
+--QUERY 6
 
 ,CASE WHEN product_name LIKE '%pepper%' 
 	THEN '1'
@@ -89,7 +93,7 @@ FROM product;
 /* 1. Write a query that INNER JOINs the vendor table to the vendor_booth_assignments table on the 
 vendor_id field they both have in common, and sorts the result by market_date, then vendor_name.
 Limit to 24 rows of output. */
---QUERY 6
+--QUERY 7
 
 SELECT *
 
@@ -109,7 +113,7 @@ LIMIT 24;
 -- AGGREGATE
 /* 1. Write a query that determines how many times each vendor has rented a booth 
 at the farmer’s market by counting the vendor booth assignments per vendor_id. */
---QUERY 7
+--QUERY 8
 
 SELECT vendor_id, COUNT(market_date) as num_of_rentals
 FROM vendor_booth_assignments
@@ -123,7 +127,7 @@ sticker to everyone who has ever spent more than $2000 at the market. Write a qu
 of customers for them to give stickers to, sorted by last name, then first name. 
 
 HINT: This query requires you to join two tables, use an aggregate function, and use the HAVING keyword. */
---QUERY 8
+--QUERY 9
 
 SELECT
 customer_last_name
@@ -151,7 +155,7 @@ When inserting the new vendor, you need to appropriately align the columns to be
 -> To insert the new row use VALUES, specifying the value you want for each column:
 VALUES(col1,col2,col3,col4,col5) 
 */
---QUERY 9
+--QUERY 10
 
 DROP TABLE IF EXISTS temp.new_vendor;
 
@@ -167,5 +171,3 @@ FROM vendor;
 
 INSERT INTO temp.new_vendor
 VALUES ('10', 'Thomas Superfood Store', 'Fresh Focused', 'Thomas', 'Rosenthal');
-
---END QUERY
