@@ -57,6 +57,16 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+Prompt 3
+
+The first possible architecture for the CUSTOMER_ADDRESS table would be Type 1 Slowly Changing Dimensions, which would perform the overwriting function. With this option, each time a customer's address is
+updated, the prior address would be deleted. The main benefit of this option is that it saves storage space, and is more efficient if prior addresses are not relevant to the business.
+
+The second possible architecture would be Type 2 Slowly Changing Dimensions, which would perform the function of retaining changes. This would create a new record each time the address was updated, using
+metadata to retain these records and keep track of the current address. This option might take up more storage space, but allows for "time-based analytics", "auditability", and "trend analysis". Essentially,
+this option would allow the business to retain more detailed records of its customers, and perform data analysis on those records rather than allowing them to be overwritten.
+
+Information about type 1 and type 2 slowly changing dimensions accessed at https://coalesce.io/data-insights/type-1-vs-type-2-slowly-changing-dimensions/.
 ```
 
 ***
