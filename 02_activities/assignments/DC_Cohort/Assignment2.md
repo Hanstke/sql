@@ -57,6 +57,16 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+Prompt 3
+
+The first possible architecture for the CUSTOMER_ADDRESS table would be Type 1 Slowly Changing Dimensions, which would perform the overwriting function. With this option, each time a customer's address is
+updated, the prior address would be deleted. The main benefit of this option is that it saves storage space, and is more efficient if prior addresses are not relevant to the business.
+
+The second possible architecture would be Type 2 Slowly Changing Dimensions, which would perform the function of retaining changes. This would create a new record each time the address was updated, using
+metadata to retain these records and keep track of the current address. This option might take up more storage space, but allows for "time-based analytics", "auditability", and "trend analysis". Essentially,
+this option would allow the business to retain more detailed records of its customers, and perform data analysis on those records rather than allowing them to be overwritten.
+
+Information about type 1 and type 2 slowly changing dimensions accessed at https://coalesce.io/data-insights/type-1-vs-type-2-slowly-changing-dimensions/.
 ```
 
 ***
@@ -192,4 +202,9 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 ```
 Your thoughts...
+
+The first repeated ethical issue that stood out to me in this article is the emphasis on unattributed labour. Be it virtual workers through Amazon's Mechanical Turk system, graduate students, or the romantic partners of the involved researchers, there is a huge amount of human labour involved in creating training data sets that goes unacknowledged and uncredited. It particularly struck me how a select number of researchers have achieved great fame and success for coming up with the *process* of creating these training data sets, yet, we will never know the names of the graduate students who relentlessly searched through newspapers to contribute to WordNet, or the Turks who clicked through untold thousands of images. Even if they were paid (likely insubstantial) amounts of money to do so, it reveals an uncomfortable truth about the idealized process of research, in which highly educated researchers are just as capable of exploiting more vulnerable groups--graduate students, online gig workers--as, taking the example from the article, something like the fast fashion industry is capable of exploiting underpaid labourers to hand-sew an endless stream of $5 garments.
+
+The second repeated ethical issue I noted is the way in which these training data sets are intended to be "objective"--for instance, the computer is able to accurately identify whether a photo contains a hotdog--and yet, there is a twofold ethical dilemma in this presumption of objectivity. Firstly, these training data sets are being employed for some ends that are simply not objective, such as providing descriptions of human faces. Secondly, the fact that these systems are being contributed to by such a huge number of unknown people makes it impossible to know if objectivity was even the primary aim for many of these contributors as they were processing data, or what unconscious biases may have otherwise prevailed in their decision-making (and the need to revamp ImageNet suggests many such biases may have affected the data). Clearly, an ethical approach to engaging with these technologies requires us to rethink any claim to objectivity, and really consider the human reasoning behind supposed artificial intelligence, just as the author of this article now sees the human effort behind every stitch in her clothing.
+
 ```
