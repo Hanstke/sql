@@ -210,4 +210,19 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 ```
 Your thoughts...
+Reading the linked article reminded me of many times that I have run up against similar issues even in supposedly less rigid data systems employed in North America. For example,
+in accessing medical services, there have been a number of times that I have been required to provide an emergency contact; despite the fact that I have not always had an appropriate
+person to designate as this contact, the system nonetheless forces me to provide the name and phone number of someone, often ending up being a person living in another province or
+otherwise unable to intervene if I ever experienced a real medical emergency. In this way, the requirement for an input value overrides its actual intended functionality, and thereby
+is indicative of an incorrect assumption about people being logged in these medical data systems.
+
+This has also made me think about current debates around required age-verification systems for social media platforms. On the one hand, such systems are theorized to help protect
+children from the increasingly evident developmental harms of childhood social media usage; yet, on the other hand, these systems also have the potential to store sensitive information
+about 'verified' users that could be used unethically in the future. For example, I recall a recent news story about a women-only app that was designed to allow women to share
+stories about abusive ex-partners and protect other women from being harmed by the same people. Use of the app required verification that the users were female, including photos
+of sensitive information like government IDs. There was little transparency about how this information was being stored. The app was ultimately hacked, and this sensitive
+information about many of the apps' users was made widely available online, making the users potential targets for abuse by those who had vehemently criticized the ethics of the app itself.
+Regardless of what one thinks about the design and function of that particular app, the event of it being hacked demonstrates the importance of ethics in the storing and handling of
+sensitive data, and the importance for users to be conscious of the increasing proliferation of data systems in our daily lives, as well as what the implications are for each one that is in
+possession of our sensitive data.
 ```
